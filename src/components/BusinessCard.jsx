@@ -1,19 +1,20 @@
 /**
- * BusinessCard component - Main component that combines all sections
+ * BusinessCard component - Modern business card design that looks like an actual card
  * 
  * Features:
- * - Combines ProfileSection, ContactInfo, and Links components
- * - Proper component composition and data flow
- * - Consistent spacing and alignment
- * - Responsive design
- * - Data validation and error handling
+ * - Realistic business card proportions and styling
+ * - Name and title positioned in top left
+ * - Contact info below name section
+ * - Links positioned at bottom border
+ * - Space reserved for company logo
+ * - Strong contrast from background
+ * - Professional shadow and elevation
  */
 
 import PropTypes from 'prop-types';
-import ProfileSection from './ProfileSection';
-import ContactInfo from './ContactInfo';
-import Links from './Links';
+import { FaEnvelope, FaMapMarkerAlt, FaBuilding, FaLinkedin, FaGlobe } from 'react-icons/fa';
 import { validateBusinessCardData } from '../data';
+import { generateMailtoLink } from '../utils/dataHelpers';
 
 function BusinessCard({ data, className = '' }) {
 	// Validate data structure
@@ -29,15 +30,92 @@ function BusinessCard({ data, className = '' }) {
 	const { profile, contact, links } = data;
 
 	return (
-		<div className={`business-card space-y-6 p-6 ${className}`}>
-			{/* Profile Section - Name, title, and photo */}
-			<ProfileSection profile={profile} />
+		<div className={`modern-business-card ${className}`}>
+			{/* Top Section - Name and Title (Top Left) */}
+			<div className="card-header">
+				<h1 className="card-name">{profile.name}</h1>
+				<h2 className="card-title">{profile.title}</h2>
+			</div>
 
-			{/* Contact Information - Email, location, company */}
-			<ContactInfo contact={contact} />
+			{/* Middle Section - Contact Information */}
+			<div className="card-contact">
+				{/* Email */}
+				<div className="contact-item">
+					<FaEnvelope className="contact-icon" />
+					<a
+						href={generateMailtoLink(contact.email)}
+						className="contact-link"
+						aria-label={`Send email to ${contact.email}`}
+					>
+						{contact.email}
+					</a>
+				</div>
 
-			{/* Professional Links - LinkedIn and website */}
-			<Links links={links} />
+				{/* Company */}
+				{contact.company && (
+					<div className="contact-item">
+						<FaBuilding className="contact-icon" />
+						<span className="contact-text">{contact.company}</span>
+					</div>
+				)}
+
+				{/* Location */}
+				<div className="contact-item">
+					<FaMapMarkerAlt className="contact-icon" />
+					<span className="contact-text">{contact.location}</span>
+				</div>
+			</div>
+
+			{/* Bottom Section - Logo Space and Links */}
+			<div className="card-footer">
+				{/* Logo Space */}
+				<div className="logo-space">
+					<div className="logo-placeholder">
+						{/* Company logo would go here */}
+						<span className="logo-text">LOGO</span>
+					</div>
+				</div>
+
+				{/* Professional Links */}
+				<div className="card-links">
+					{links.personalLinkedIn && (
+						<a
+							href={links.personalLinkedIn}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="card-link"
+							aria-label="Visit personal LinkedIn profile"
+							title="LinkedIn Profile"
+						>
+							<FaLinkedin />
+						</a>
+					)}
+					{links.companyLinkedIn && (
+						<a
+							href={links.companyLinkedIn}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="card-link"
+							aria-label="Visit company LinkedIn page"
+							title="Company LinkedIn"
+						>
+							<FaLinkedin />
+						</a>
+					)}
+					{links.companyWebsite && (
+						<a
+							href={links.companyWebsite}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="card-link"
+							aria-label="Visit company website"
+							title="Company Website"
+						>
+							<FaGlobe />
+						</a>
+					)}
+				</div>
+			</div>
 		</div>
 	);
 }

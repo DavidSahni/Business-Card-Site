@@ -11,249 +11,24 @@
 
 /* Import Inter font with font-display: swap for performance */
 
-/* CSS Custom Properties for Design System */
+/* CSS Custom Properties - Only used variables */
 :root {
-  /* Color Palette - Professional Theme */
-  --color-primary: #1e40af;
-  --color-primary-hover: #1d4ed8;
-  --color-secondary: #64748b;
-  --color-secondary-hover: #475569;
-  
-  /* Text Colors */
   --color-text-primary: #111827;
-  --color-text-secondary: #4b5563;
-  --color-text-muted: #6b7280;
-  --color-text-light: #9ca3af;
-  
-  /* Background Colors */
-  --color-bg-primary: #ffffff;
   --color-bg-secondary: #f8fafc;
-  --color-bg-muted: #f1f5f9;
-  
-  /* Border Colors */
-  --color-border-light: #e2e8f0;
-  --color-border-medium: #cbd5e1;
-  --color-border-dark: #94a3b8;
-  
-  /* Shadow Colors */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  
-  /* Typography Scale */
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  
-  /* Font Weights */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  
-  /* Spacing Scale */
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-  --spacing-12: 3rem;
-  
-  /* Border Radius */
-  --radius-sm: 0.125rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
-  --radius-full: 9999px;
-  
-  /* Transitions */
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 300ms ease-in-out;
-  --transition-slow: 500ms ease-in-out;
 }
 
 /* Base Typography */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-  font-variation-settings: normal;
   line-height: 1.5;
   color: var(--color-text-primary);
   background-color: var(--color-bg-secondary);
 }
 
-/* Professional Card Styling */
-.business-card {
-  background: var(--color-bg-primary);
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--color-border-light);
-  transition: box-shadow var(--transition-normal);
-}
-
-.business-card:hover {
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-}
-
-/* Typography Hierarchy */
-.heading-primary {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  line-height: 1.2;
-  letter-spacing: -0.025em;
-}
-
-.heading-secondary {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  line-height: 1.3;
-}
-
-.body-text {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  color: var(--color-text-secondary);
-  line-height: 1.5;
-}
-
-.small-text {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-normal);
-  color: var(--color-text-muted);
-  line-height: 1.4;
-}
-
-/* Interactive Elements */
-.link-primary {
-  color: var(--color-primary);
-  transition: color var(--transition-fast);
-}
-
-.link-primary:hover {
-  color: var(--color-primary-hover);
-}
-
-.icon-interactive {
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.icon-interactive:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
-}
-
-/* Focus States for Accessibility */
-.focus-ring:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-/* Text Selection Optimization */
-.selectable-text {
-  user-select: all;
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
-}
-
-/* Profile Photo Styling */
-.profile-photo {
-  border-radius: var(--radius-full);
-  border: 2px solid var(--color-border-light);
-  box-shadow: var(--shadow-sm);
-  object-fit: cover;
-}
-
-/* Responsive Typography */
-@media (min-width: 640px) {
-  .heading-primary {
-    font-size: var(--font-size-4xl);
-  }
-  
-  .heading-secondary {
-    font-size: var(--font-size-2xl);
-  }
-}
-
-@media (min-width: 1024px) {
-  .heading-primary {
-    font-size: 2.5rem;
-  }
-  
-  .heading-secondary {
-    font-size: var(--font-size-2xl);
-  }
-}
-/* 
-Accessibility Styles */
-
-/* Screen reader only text */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Show screen reader text on focus */
-.sr-only:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-/* Enhanced focus styles for better visibility */
-.focus-ring:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-.focus-ring:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  :root {
-    --color-text-primary: #000000;
-    --color-text-secondary: #000000;
-    --color-bg-primary: #ffffff;
-    --shadow-xl: 0 0 0 2px #000000;
-  }
-  
-  .business-card {
-    border: 2px solid #000000;
-  }
-}
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -264,31 +39,258 @@ Accessibility Styles */
   }
 }
 
-/* Color contrast validation classes */
-.contrast-aa {
-  /* Ensures 4.5:1 contrast ratio for normal text */
-  color: var(--color-text-primary);
+/* Modern Business Card Styling */
+.modern-business-card {
+  /* Business card proportions - roughly 3.5" x 2" scaled up */
+  width: 350px;
+  height: 200px;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
-.contrast-aa-large {
-  /* Ensures 3:1 contrast ratio for large text (18pt+ or 14pt+ bold) */
-  color: var(--color-text-secondary);
-}
-
-/* Skip link styling */
-.skip-link {
+.modern-business-card::before {
+  content: '';
   position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--color-primary);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  border-radius: var(--radius-md);
-  z-index: 1000;
-  transition: top var(--transition-fast);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-linear-gradient(45deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.03) 1px,
+      rgba(255, 255, 255, 0.03) 2px);
+  pointer-events: none;
 }
 
-.skip-link:focus {
-  top: 6px;
+.modern-business-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 30px 60px -12px rgba(0, 0, 0, 0.35),
+    0 18px 36px -18px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Card Header - Name and Title (Top Left) */
+.card-header {
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.card-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #1e40af, #3b82f6, #6366f1);
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+.modern-business-card:hover .card-header::after {
+  width: 60px;
+}
+
+.card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.025em;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Contact Information Section */
+.card-contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  width: 12px;
+  height: 12px;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.contact-link {
+  font-size: 0.75rem;
+  color: #1e40af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.contact-text {
+  font-size: 0.75rem;
+  color: #475569;
+  font-weight: 400;
+}
+
+/* Card Footer - Logo and Links */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+/* Logo Space */
+.logo-space {
+  flex: 1;
+}
+
+.logo-placeholder {
+  width: 70px;
+  height: 24px;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.logo-text {
+  font-size: 0.625rem;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  z-index: 1;
+  position: relative;
+}
+
+/* Professional Links */
+.card-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.card-link {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: #1e40af;
+  transform: scale(1.1);
+  background: rgba(30, 64, 175, 0.1);
+}
+
+.card-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Responsive Design for Business Card */
+@media (max-width: 640px) {
+  .modern-business-card {
+    width: 320px;
+    height: 180px;
+    padding: 16px;
+  }
+
+  .card-name {
+    font-size: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 0.75rem;
+  }
+
+  .contact-link,
+  .contact-text {
+    font-size: 0.7rem;
+  }
+
+  .logo-placeholder {
+    width: 50px;
+    height: 18px;
+  }
+
+  .card-link {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card-link svg {
+    width: 12px;
+    height: 12px;
+  }
 }

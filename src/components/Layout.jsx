@@ -19,48 +19,23 @@ function Layout({ children, className = '', variant = 'default' }) {
 	// Background variants for different themes
 	const backgroundVariants = {
 		default: "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100",
-		professional: "bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100",
+		professional: "bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900",
 		modern: "bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
 	};
 
-	// Card styling with enhanced responsive design
+	// Simplified container for the business card
 	const cardClasses = `
-    bg-white 
-    rounded-xl 
-    shadow-xl 
-    shadow-slate-200/50
-    hover:shadow-2xl
-    hover:shadow-slate-300/30
-    transition-all
-    duration-300
-    ease-in-out
-    p-4 
-    sm:p-6 
-    md:p-8
-    lg:p-10
-    max-w-xs
-    sm:max-w-sm
-    md:max-w-md 
-    lg:max-w-lg
-    w-full 
-    mx-auto
-    border 
-    border-slate-100/50
-    backdrop-blur-sm
-    relative
-    overflow-hidden
+    flex
+    items-center
+    justify-center
+    w-full
+    h-full
   `.replace(/\s+/g, ' ').trim();
 
 	return (
 		<div className={`${containerClasses} ${backgroundVariants[variant] || backgroundVariants.default}`}>
-			<div className={`max-w-sm sm:max-w-md md:max-w-md lg:max-w-lg w-full mx-auto ${className}`}>
-				{/* Subtle decorative element */}
-				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-60 rounded-t-xl"></div>
-
-				{/* Main content */}
-				<div className="relative z-10">
-					{children}
-				</div>
+			<div className={cardClasses}>
+				{children}
 			</div>
 		</div>
 	);
