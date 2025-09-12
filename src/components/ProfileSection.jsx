@@ -22,7 +22,7 @@ function ProfileSection({ profile, className = '' }) {
 					<img
 						src={photo}
 						alt={`${name}'s profile photo`}
-						className="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto object-cover border-2 border-slate-200 shadow-sm"
+						className="profile-photo w-20 h-20 sm:w-24 sm:h-24 mx-auto"
 						onError={(e) => {
 							// Hide image if it fails to load
 							e.target.style.display = 'none';
@@ -32,12 +32,12 @@ function ProfileSection({ profile, className = '' }) {
 			)}
 
 			{/* Name - Primary heading */}
-			<h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 leading-tight">
+			<h1 className="heading-primary mb-2">
 				{name}
 			</h1>
 
 			{/* Title - Secondary heading */}
-			<h2 className="text-lg sm:text-xl text-gray-600 font-medium leading-relaxed">
+			<h2 className="heading-secondary">
 				{title}
 			</h2>
 		</div>

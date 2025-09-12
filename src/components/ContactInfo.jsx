@@ -20,10 +20,10 @@ function ContactInfo({ contact, className = '' }) {
 		<div className={`space-y-3 mb-6 ${className}`}>
 			{/* Email */}
 			<div className="flex items-center justify-center space-x-3">
-				<FaEnvelope className="text-gray-500 text-sm flex-shrink-0" />
+				<FaEnvelope className="small-text flex-shrink-0" style={{ color: 'var(--color-text-muted)' }} />
 				<a
 					href={generateMailtoLink(email)}
-					className="text-gray-700 hover:text-blue-600 transition-colors duration-200 select-all cursor-pointer text-sm sm:text-base"
+					className="link-primary selectable-text cursor-pointer body-text focus-ring"
 					aria-label={`Send email to ${email}`}
 				>
 					{email}
@@ -32,8 +32,8 @@ function ContactInfo({ contact, className = '' }) {
 
 			{/* Location */}
 			<div className="flex items-center justify-center space-x-3">
-				<FaMapMarkerAlt className="text-gray-500 text-sm flex-shrink-0" />
-				<span className="text-gray-700 select-all text-sm sm:text-base">
+				<FaMapMarkerAlt className="small-text flex-shrink-0" style={{ color: 'var(--color-text-muted)' }} />
+				<span className="body-text selectable-text">
 					{location}
 				</span>
 			</div>
@@ -41,8 +41,8 @@ function ContactInfo({ contact, className = '' }) {
 			{/* Company (if provided) */}
 			{company && (
 				<div className="flex items-center justify-center space-x-3">
-					<FaBuilding className="text-gray-500 text-sm flex-shrink-0" />
-					<span className="text-gray-700 select-all font-medium text-sm sm:text-base">
+					<FaBuilding className="small-text flex-shrink-0" style={{ color: 'var(--color-text-muted)' }} />
+					<span className="body-text selectable-text font-medium">
 						{company}
 					</span>
 				</div>

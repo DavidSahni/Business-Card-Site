@@ -29,7 +29,7 @@ function BusinessCard({ data, className = '' }) {
 	const { profile, contact, links } = data;
 
 	return (
-		<div className={`space-y-6 ${className}`}>
+		<div className={`business-card space-y-6 p-6 ${className}`}>
 			{/* Profile Section - Name, title, and photo */}
 			<ProfileSection profile={profile} />
 

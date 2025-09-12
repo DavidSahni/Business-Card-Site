@@ -52,14 +52,19 @@ function Links({ links, className = '' }) {
 		<div className={`flex justify-center space-x-6 ${className}`}>
 			{validLinks.map(({ type, url, displayName }) => {
 				const IconComponent = getIcon(type);
-				const iconColorClass = getIconColor(type);
 				const linkProps = formatExternalLink(url);
+
+				// Use design system colors
+				const iconStyle = {
+					color: type.includes('linkedin') ? 'var(--color-primary)' : 'var(--color-secondary)'
+				};
 
 				return (
 					<a
 						key={type}
 						{...linkProps}
-						className={`${iconColorClass} transition-all duration-200 hover:scale-110 focus:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-full p-1`}
+						className="icon-interactive focus-ring rounded-full p-1"
+						style={iconStyle}
 						aria-label={ARIA_LABELS[type] || `Visit ${displayName}`}
 						title={displayName}
 					>

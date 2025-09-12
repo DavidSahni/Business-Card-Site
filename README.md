@@ -101,12 +101,34 @@ export const sampleProfileData = {
 
 ### Styling
 
-The design system is located in `src/styles/design-system.css`. You can customize:
+The design system is located in `src/styles/design-system.css` and uses CSS custom properties for easy customization:
 
-- Color palette (CSS custom properties)
-- Typography scale
-- Spacing and layout
-- Component styling
+#### Design System Classes
+- `.business-card` - Main card styling with shadows and borders
+- `.heading-primary` - Primary heading (name) styling
+- `.heading-secondary` - Secondary heading (title) styling  
+- `.body-text` - Body text styling
+- `.small-text` - Small text styling
+- `.link-primary` - Primary link styling with hover effects
+- `.icon-interactive` - Interactive icon styling with hover animations
+- `.profile-photo` - Profile photo styling with circular border
+
+#### CSS Custom Properties
+```css
+:root {
+  /* Colors */
+  --color-primary: #1e40af;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  
+  /* Typography */
+  --font-size-3xl: 1.875rem;
+  --font-weight-bold: 700;
+  
+  /* Shadows */
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+```
 
 ### Layout Variants
 

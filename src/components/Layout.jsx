@@ -53,9 +53,9 @@ function Layout({ children, className = '', variant = 'default' }) {
 
 	return (
 		<div className={`${containerClasses} ${backgroundVariants[variant] || backgroundVariants.default}`}>
-			<div className={`${cardClasses} ${className}`}>
+			<div className={`max-w-sm sm:max-w-md md:max-w-md lg:max-w-lg w-full mx-auto ${className}`}>
 				{/* Subtle decorative element */}
-				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-60"></div>
+				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-60 rounded-t-xl"></div>
 
 				{/* Main content */}
 				<div className="relative z-10">
