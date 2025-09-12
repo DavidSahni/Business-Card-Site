@@ -1,11 +1,11 @@
 import Layout from './components/Layout'
 import BusinessCard from './components/BusinessCard'
-import { sampleProfileData } from './data'
+import { davidProfileData, sampleProfileData } from './data'
 
 function App() {
   return (
     <Layout variant="professional">
-      <BusinessCard data={sampleProfileData} />
+      <BusinessCard data={davidProfileData} />
     </Layout>
   )
 }

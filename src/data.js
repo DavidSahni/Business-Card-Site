@@ -7,6 +7,27 @@
 /**
  * @type {import('./types.js').BusinessCardData}
  */
+export const davidProfileData = {
+  profile: {
+    name: "David Sahni",
+    title: "Senior Software Engineer",
+  },
+    contact: {
+      email: "David.Sahni@levrum.com",
+      location: "Portland, OR",
+      company: "Levrum"
+    },
+    links: {
+      personalLinkedIn: "https://www.linkedin.com/in/david-sahni-849b5a15a/",
+      companyLinkedIn: "https://www.linkedin.com/company/levrum/posts/?feedView=all",
+      companyWebsite: "https://levrum.com"
+    }
+  };
+
+
+/**
+ * @type {import('./types.js').BusinessCardData}
+ */
 export const sampleProfileData = {
   profile: {
     name: "Sarah Johnson",
