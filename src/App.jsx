@@ -1,6 +1,6 @@
 import Layout from './components/Layout'
 import BusinessCard from './components/BusinessCard'
-import { davidProfileData, sampleProfileData } from './data'
+import { davidProfileData } from './data'
 
 function App() {
   return (
