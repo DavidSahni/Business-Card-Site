@@ -13,7 +13,7 @@ export default defineConfig({
     }),
     tailwindcss()
   ],
-  base: "/business-card-site",
+  base: "/Business-Card-Site/",
   build: {
     // Optimize bundle size
     rollupOptions: {
