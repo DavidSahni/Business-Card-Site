@@ -47,9 +47,9 @@ body {
 
 /* Modern Business Card Styling */
 .modern-business-card {
-  /* Business card proportions - roughly 3.5" x 2" scaled up */
-  width: 350px;
-  height: 200px;
+  /* Business card proportions - roughly 3.5" x 2" scaled up by 5% */
+  width: 368px;
+  height: 210px;
   background: #ffffff !important;
   border-radius: 12px;
   box-shadow:
@@ -179,15 +179,11 @@ body {
   flex: 1;
 }
 
-.logo {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
 
 .logo {
-  width: 70px;
-  height: 24px;
+  height: 28px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo-placeholder {
@@ -266,8 +262,8 @@ body {
 /* Responsive Design for Business Card */
 @media (max-width: 640px) {
   .modern-business-card {
-    width: 320px;
-    height: 180px;
+    width: 336px;
+    height: 189px;
     padding: 16px;
   }
 
