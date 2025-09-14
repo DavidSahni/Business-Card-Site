@@ -180,6 +180,12 @@ body {
 }
 
 .logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo {
   width: 70px;
   height: 24px;
 }

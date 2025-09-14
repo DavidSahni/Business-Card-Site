@@ -4,7 +4,15 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react({
+      // Enable Fast Refresh
+      fastRefresh: true,
+      // Include .jsx files
+      include: "**/*.{jsx,tsx}",
+    }),
+    tailwindcss()
+  ],
   build: {
     // Optimize bundle size
     rollupOptions: {
@@ -26,10 +34,21 @@ export default defineConfig({
       }
     }
   },
-  // Optimize dev server
+  // Optimize dev server for hot reload
   server: {
+    port: 5173,
+    host: true,
     hmr: {
-      overlay: false
+      overlay: true,
+      clientPort: 5173
+    },
+    watch: {
+      usePolling: true,
+      interval: 100
     }
+  },
+  // Optimize dependencies for faster hot reload
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-icons/fa']
   }
 })
