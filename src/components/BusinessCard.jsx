@@ -15,6 +15,7 @@ import PropTypes from 'prop-types';
 import { FaEnvelope, FaMapMarkerAlt, FaBuilding, FaLinkedin, FaGlobe } from 'react-icons/fa';
 import { validateBusinessCardData } from '../data';
 import { generateMailtoLink } from '../utils/dataHelpers';
+import logo from '../assets/levrum-logo.png';
 
 function BusinessCard({ data, className = '' }) {
 	// Validate data structure
@@ -70,10 +71,7 @@ function BusinessCard({ data, className = '' }) {
 			<div className="card-footer">
 				{/* Logo Space */}
 				<div className="logo-space">
-					<div className="logo-placeholder">
-						{/* Company logo would go here */}
-						<span className="logo-text">LOGO</span>
-					</div>
+					<img className="logo" src={logo}	/>
 				</div>
 
 				{/* Professional Links */}

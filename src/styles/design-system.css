@@ -96,7 +96,7 @@ body {
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #1e40af, #3b82f6, #6366f1);
+  background: linear-gradient(90deg, #f0381f, #f0381f, #f0381f);
   border-radius: 1px;
   transition: width 0.3s ease;
 }
@@ -177,6 +177,11 @@ body {
 /* Logo Space */
 .logo-space {
   flex: 1;
+}
+
+.logo {
+  width: 70px;
+  height: 24px;
 }
 
 .logo-placeholder {
