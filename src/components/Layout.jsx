@@ -18,9 +18,9 @@ function Layout({ children, className = '', variant = 'default' }) {
 
 	// Background variants for different themes
 	const backgroundVariants = {
-		default: "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100",
-		professional: "bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900",
-		modern: "bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
+		default: "bg-slate-100",
+		professional: "dark-background",
+		modern: "bg-blue-50"
 	};
 
 	// Simplified container for the business card
