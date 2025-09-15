@@ -71,7 +71,7 @@ function BusinessCard({ data, className = '' }) {
 			<div className="card-footer">
 				{/* Logo Space */}
 				<div className="logo-space">
-					<a href="https://levrum.com">
+					<a href="https://levrum.com" target="_blank">
 						<img className="logo" src={logo} alt="Levrum Logo" />
 					</a>
 				</div>
