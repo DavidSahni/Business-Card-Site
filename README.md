@@ -191,23 +191,5 @@ The `dist` folder contains the optimized production build ready for deployment t
 
 MIT License - see LICENSE file for details
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass
-6. Submit a pull request
-
-## Requirements Satisfied
-
-This implementation satisfies all specified requirements:
-
-- ✅ **Professional Business Card Display** (1.1, 1.2)
-- ✅ **Interactive Elements** (2.1, 2.2, 2.3, 2.6)
-- ✅ **Responsive Design** (3.1, 3.2, 3.3, 3.4)
-- ✅ **Professional Styling** (4.1, 4.2, 4.3, 4.4, 4.5)
-- ✅ **User Experience** (5.1, 5.3)
-
-For detailed requirements mapping, see the project specifications in `.kiro/specs/business-card-website/`.
+## Attribution:
+Favicon courtesy of Twemoji: https://github.com/twitter/twemoji
